@@ -1,0 +1,4 @@
+name = "emergency-plumber-site"
+compatibility_date = "2025-12-14"
+pages_build_output_dir = "./dist"
+

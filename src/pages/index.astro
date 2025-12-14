@@ -6,21 +6,1075 @@ const phone = "055-XXX-XXXX";
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Emergency Plumber Dubai | 24/7 Plumbing Service</title>
-		<meta name="description" content="24/7 emergency plumber in Dubai. Fast response for burst pipes, leaks and flooding. Call now.">
+	<title>Emergency Plumber Dubai | 24/7 Plumbing Service</title>
+	<meta name="description" content="24/7 emergency plumber in Dubai. Fast response for burst pipes, leaks and flooding. Call now.">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+			line-height: 1.6;
+			color: #333;
+		}
+		
+		/* Header */
+		header {
+			background: #1a1a2e;
+			color: white;
+			padding: 1rem 2rem;
+			position: sticky;
+			top: 0;
+			z-index: 1000;
+			box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+		}
+		
+		.header-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+		
+		.logo {
+			font-size: 1.5rem;
+			font-weight: bold;
+			color: white;
+			text-decoration: none;
+			letter-spacing: 1px;
+		}
+		
+		nav {
+			display: flex;
+			gap: 2rem;
+			flex-wrap: wrap;
+		}
+		
+		nav a {
+			color: white;
+			text-decoration: none;
+			transition: color 0.3s;
+			font-size: 0.95rem;
+		}
+		
+		nav a:hover {
+			color: #4ade80;
+		}
+		
+		.header-cta {
+			display: flex;
+			gap: 1rem;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		
+		.phone-btn {
+			background: #4ade80;
+			color: white;
+			padding: 0.75rem 1.5rem;
+			border-radius: 5px;
+			text-decoration: none;
+			font-weight: bold;
+			transition: background 0.3s;
+			font-size: 0.95rem;
+		}
+		
+		.phone-btn:hover {
+			background: #22c55e;
+		}
+		
+		.schedule-btn {
+			background: transparent;
+			color: white;
+			padding: 0.75rem 1.5rem;
+			border: 2px solid #4ade80;
+			border-radius: 5px;
+			text-decoration: none;
+			font-weight: bold;
+			transition: all 0.3s;
+			font-size: 0.95rem;
+		}
+		
+		.schedule-btn:hover {
+			background: #4ade80;
+		}
+		
+		/* Hero Section */
+		.hero {
+			position: relative;
+			min-height: 600px;
+			display: flex;
+			align-items: center;
+			overflow: hidden;
+		}
+		
+		.hero-bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f5f5f5" width="1200" height="600"/><rect x="600" y="0" width="600" height="600" fill="%23e8e8e8"/><circle cx="900" cy="300" r="100" fill="%234ade80" opacity="0.1"/></svg>') center/cover;
+			z-index: 0;
+		}
+		
+		.hero-overlay {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 50%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.6);
+			z-index: 1;
+		}
+		
+		.hero-content {
+			position: relative;
+			z-index: 2;
+			max-width: 500px;
+			padding: 3rem 3rem 3rem 4rem;
+			color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		
+		.hero h1 {
+			font-size: 2.8rem;
+			margin-bottom: 1.5rem;
+			line-height: 1.2;
+			font-weight: bold;
+			color: white;
+			white-space: nowrap;
+		}
+		
+		.hero p {
+			font-size: 0.95rem;
+			margin-bottom: 1.5rem;
+			opacity: 0.95;
+			line-height: 1.6;
+			color: white;
+		}
+		
+		.special-offer {
+			color: white;
+			margin-bottom: 2rem;
+			font-weight: bold;
+			font-size: 1.1rem;
+		}
+		
+		.cta-button {
+			background: #4ade80;
+			color: white;
+			padding: 1rem 2.5rem;
+			border-radius: 5px;
+			text-decoration: none;
+			font-weight: bold;
+			font-size: 1rem;
+			display: inline-block;
+			transition: background 0.3s;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+		
+		.cta-button:hover {
+			background: #22c55e;
+		}
+		
+		/* Client Logos */
+		.client-logos {
+			background: white;
+			padding: 2rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 4rem;
+			flex-wrap: wrap;
+		}
+		
+		.client-logo {
+			width: 120px;
+			height: 60px;
+			background: #f0f0f0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 5px;
+			font-size: 0.8rem;
+			color: #666;
+			font-weight: bold;
+		}
+		
+		/* Services Section */
+		.services {
+			padding: 4rem 2rem;
+			background: white;
+		}
+		
+		.container {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+		
+		.section-title {
+			text-align: center;
+			font-size: 2.5rem;
+			margin-bottom: 3rem;
+			color: #1a1a2e;
+			font-weight: bold;
+		}
+		
+		.service-block {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 4rem;
+			align-items: center;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.service-block.reversed {
+			grid-template-columns: 1fr 1fr;
+		}
+		
+		.service-block.reversed .service-content {
+			order: 2;
+		}
+		
+		.service-block.reversed .service-image {
+			order: 1;
+		}
+		
+		.service-content {
+			padding: 2rem 0;
+		}
+		
+		.service-subtitle {
+			color: #4ade80;
+			font-size: 0.9rem;
+			font-weight: bold;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			margin-bottom: 1rem;
+		}
+		
+		.service-title {
+			font-size: 2.5rem;
+			font-weight: bold;
+			color: #1a1a2e;
+			margin-bottom: 1.5rem;
+			line-height: 1.2;
+		}
+		
+		.service-description {
+			font-size: 1.1rem;
+			line-height: 1.8;
+			color: #666;
+			margin-bottom: 2rem;
+		}
+		
+		.service-cta {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+			margin-top: 2rem;
+		}
+		
+		.service-cta-icon {
+			width: 50px;
+			height: 50px;
+			background: #4ade80;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.5rem;
+		}
+		
+		.service-cta-text {
+			font-size: 1rem;
+			color: #333;
+		}
+		
+		.service-cta-link {
+			color: #4ade80;
+			text-decoration: none;
+			font-weight: bold;
+		}
+		
+		.service-cta-link:hover {
+			text-decoration: underline;
+		}
+		
+		.service-image {
+			width: 100%;
+			height: 500px;
+			background: #f8f9fa;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.service-image-placeholder {
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.2rem;
+			color: #666;
+			font-weight: bold;
+		}
+		
+		@media (max-width: 968px) {
+			.service-block {
+				grid-template-columns: 1fr;
+				gap: 2rem;
+			}
+			
+			.service-block.reversed .service-content {
+				order: 2;
+			}
+			
+			.service-block.reversed .service-image {
+				order: 1;
+			}
+			
+			.service-image {
+				height: 300px;
+			}
+		}
+		
+		/* Coupons Section */
+		.coupons {
+			padding: 4rem 2rem;
+			background: #f8f9fa;
+			background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(0,0,0,0.02) 10px, rgba(0,0,0,0.02) 20px);
+		}
+		
+		.coupon-container {
+			max-width: 500px;
+			margin: 0 auto;
+			position: relative;
+		}
+		
+		.coupon-card {
+			background: white;
+			border: 4px solid #4ade80;
+			border-radius: 10px;
+			padding: 2.5rem;
+			text-align: center;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+		}
+		
+		.coupon-brand {
+			font-size: 1.5rem;
+			font-weight: bold;
+			color: #1a1a2e;
+			margin-bottom: 1rem;
+			letter-spacing: 2px;
+		}
+		
+		.coupon-amount {
+			font-size: 4rem;
+			font-weight: bold;
+			color: #4ade80;
+			margin-bottom: 0.5rem;
+		}
+		
+		.coupon-title {
+			font-size: 1.3rem;
+			font-weight: bold;
+			color: #1a1a2e;
+			margin-bottom: 1.5rem;
+			text-transform: uppercase;
+		}
+		
+		.coupon-terms {
+			font-size: 0.9rem;
+			color: #666;
+			margin-bottom: 0.5rem;
+		}
+		
+		.coupon-expiry {
+			font-size: 0.85rem;
+			color: #999;
+		}
+		
+		.coupon-nav {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #4ade80;
+			color: white;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			font-size: 1.2rem;
+			border: none;
+		}
+		
+		.coupon-nav.prev {
+			left: -60px;
+		}
+		
+		.coupon-nav.next {
+			right: -60px;
+		}
+		
+		/* Testimonials */
+		.testimonials {
+			padding: 4rem 2rem;
+			background: white;
+		}
+		
+		.testimonial-container {
+			max-width: 700px;
+			margin: 0 auto;
+			position: relative;
+		}
+		
+		.yelp-logo {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			margin-bottom: 2rem;
+		}
+		
+		.yelp-logo-text {
+			font-size: 2rem;
+			font-weight: bold;
+			color: #d32323;
+		}
+		
+		.stars {
+			color: #d32323;
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
+			text-align: center;
+		}
+		
+		.testimonial-text {
+			font-size: 1.2rem;
+			line-height: 1.8;
+			margin-bottom: 1.5rem;
+			color: #333;
+			text-align: center;
+		}
+		
+		.testimonial-author {
+			font-weight: bold;
+			color: #1a1a2e;
+			text-align: center;
+		}
+		
+		.testimonial-nav {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #4ade80;
+			color: white;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			font-size: 1.2rem;
+			border: none;
+		}
+		
+		.testimonial-nav.prev {
+			left: -60px;
+		}
+		
+		.testimonial-nav.next {
+			right: -60px;
+		}
+		
+		/* Projects Section */
+		.projects {
+			padding: 4rem 2rem;
+			background: #f8f9fa;
+		}
+		
+		.projects-subtitle {
+			text-align: center;
+			color: #666;
+			margin-bottom: 3rem;
+			font-size: 1.1rem;
+		}
+		
+		.projects-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 2rem;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.project-card {
+			position: relative;
+			border-radius: 10px;
+			overflow: hidden;
+			box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+		}
+		
+		.project-image {
+			width: 100%;
+			height: 250px;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+		
+		.project-title {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: rgba(0,0,0,0.7);
+			color: white;
+			padding: 1rem;
+			text-align: center;
+			font-weight: bold;
+		}
+		
+		.projects-nav {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background: #4ade80;
+			color: white;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			font-size: 1.2rem;
+			border: none;
+			z-index: 10;
+		}
+		
+		.projects-container {
+			position: relative;
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		
+		.projects-nav.prev {
+			left: -60px;
+		}
+		
+		.projects-nav.next {
+			right: -60px;
+		}
+		
+		/* Service Areas */
+		.service-areas {
+			padding: 4rem 2rem;
+			background: white;
+		}
+		
+		.map-container {
+			width: 100%;
+			height: 500px;
+			background: #e5e7eb;
+			border-radius: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: #666;
+			font-size: 1.2rem;
+			position: relative;
+			overflow: hidden;
+		}
+		
+		.map-placeholder {
+			text-align: center;
+		}
+		
+		.map-pin {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			background: #3b82f6;
+			border-radius: 50% 50% 50% 0;
+			transform: rotate(-45deg);
+			border: 2px solid white;
+		}
+		
+		/* Footer */
+		footer {
+			background: #1a1a2e;
+			color: white;
+			padding: 3rem 2rem 1rem;
+		}
+		
+		.footer-content {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			gap: 3rem;
+			margin-bottom: 2rem;
+		}
+		
+		.footer-section h3 {
+			margin-bottom: 1rem;
+			color: #4ade80;
+			font-size: 1.1rem;
+		}
+		
+		.footer-section p {
+			margin-bottom: 0.5rem;
+			color: #ccc;
+		}
+		
+		.footer-section a {
+			color: white;
+			text-decoration: none;
+			display: block;
+			margin-bottom: 0.5rem;
+			transition: color 0.3s;
+		}
+		
+		.footer-section a:hover {
+			color: #4ade80;
+		}
+		
+		.social-icons {
+			display: flex;
+			gap: 1rem;
+			margin-top: 1rem;
+		}
+		
+		.social-icon {
+			width: 40px;
+			height: 40px;
+			background: #333;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+			text-decoration: none;
+			transition: background 0.3s;
+		}
+		
+		.social-icon:hover {
+			background: #4ade80;
+		}
+		
+		.footer-bottom {
+			text-align: center;
+			padding-top: 2rem;
+			border-top: 1px solid #333;
+			color: #999;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+		
+		.footer-bottom a {
+			color: #999;
+			text-decoration: none;
+		}
+		
+		/* Floating Chat Button */
+		.chat-button {
+			position: fixed;
+			bottom: 2rem;
+			right: 2rem;
+			background: #4ade80;
+			color: white;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-size: 1.5rem;
+			cursor: pointer;
+			box-shadow: 0 4px 12px rgba(74, 222, 128, 0.4);
+			z-index: 1000;
+			transition: transform 0.3s;
+		}
+		
+		.chat-button:hover {
+			transform: scale(1.1);
+		}
+		
+		/* Responsive */
+		@media (max-width: 768px) {
+			.hero {
+				min-height: 500px;
+			}
+			
+			.hero-overlay {
+				width: 100%;
+				background: rgba(0, 0, 0, 0.7);
+			}
+			
+			.hero-content {
+				max-width: 100%;
+				padding: 2rem;
+			}
+			
+			.hero h1 {
+				font-size: 1.8rem;
+				white-space: normal;
+			}
+			
+			.hero p {
+				font-size: 0.9rem;
+			}
+			
+			nav {
+				display: none;
+			}
+			
+			.coupon-nav,
+			.testimonial-nav,
+			.projects-nav {
+				display: none;
+			}
+			
+			.services-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
 	</head>
 	<body>
-		<h1>Emergency Plumber in Dubai</h1>
-		<p><strong>24/7 emergency plumbing service.</strong> Burst pipes, water leaks, blocked drains.</p>
-		<p>📞 <a href={`tel:${phone}`}>{phone}</a></p>
-		<ul>
-			<li>Burst pipe repair</li>
-			<li>Water leak emergency</li>
-			<li>Flooded bathroom</li>
-			<li>Blocked drain</li>
-		</ul>
-		<p><a href="/emergency-plumber-dubai-marina">Dubai Marina Service</a></p>
+	<!-- Header -->
+	<header>
+		<div class="header-container">
+			<a href="/" class="logo">EMERGENCY PLUMBER DUBAI</a>
+			<nav>
+				<a href="/">Home</a>
+				<a href="#services">Services</a>
+				<a href="#contact">Contact Us</a>
+				<a href="#about">About Us</a>
+				<a href="#blog">Blog</a>
+			</nav>
+			<div class="header-cta">
+				<a href={`tel:${phone}`} class="phone-btn">{phone}</a>
+				<a href={`tel:${phone}`} class="schedule-btn">Schedule Service</a>
+			</div>
+		</div>
+	</header>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="hero-bg"></div>
+		<div class="hero-overlay"></div>
+		<div class="hero-content">
+			<h1>Home Drain Clogged? We Can Fix It!</h1>
+			<p>Spent several hours trying to unclog your drains, toilet drain, kitchen drain, bathroom tub, shower drain or sink drain, using DIY methods and still have no luck? Call us and we'll unclog your drain today, so you can focus on what matters most. We Are Your 24/7 Local Plumber.</p>
+			<div class="special-offer">*AED 199 Drain Clearing Special.</div>
+			<a href={`tel:${phone}`} class="cta-button">SCHEDULE SERVICE ONLINE</a>
+		</div>
+	</section>
+
+	<!-- Client Logos -->
+	<section class="client-logos">
+		<div class="client-logo">McDonald's</div>
+		<div class="client-logo">Burger King</div>
+		<div class="client-logo">KFC</div>
+	</section>
+
+	<!-- Services Section -->
+	<section class="services" id="services">
+		<div class="container">
+			<div class="service-block">
+				<div class="service-content">
+					<div class="service-subtitle">DRAIN ISSUES WE SERVICE</div>
+					<h2 class="service-title">AED 199 Unclogs Drain:</h2>
+					<p class="service-description">
+						Clogged drains are incredibly frustrating. They prevent you from using your sinks, showers, tubs, or toilets. A clogged drain can also indicate a larger issue, such as a main sewer line clog. Our AED 199 Drain Clearing Special is valid only with accessible clean-out.
+					</p>
+					<div class="service-cta">
+						<div class="service-cta-icon">🔧</div>
+						<div class="service-cta-text">
+							If you need clogged drain clearing services, rely on the expert plumbers at Emergency Plumber Dubai. <a href={`tel:${phone}`} class="service-cta-link">Book Online</a>
+						</div>
+					</div>
+				</div>
+				<div class="service-image">
+					<div class="service-image-placeholder">
+						Isometric Plumbing Illustration<br/>
+						(Kitchen, Bathroom, Plumber)
+					</div>
+				</div>
+			</div>
+			
+			<div class="service-block reversed" style="margin-top: 4rem;">
+				<div class="service-image">
+					<div class="service-image-placeholder">
+						Isometric Kitchen Illustration<br/>
+						(Kitchen, Sink, Plumber)
+					</div>
+				</div>
+				<div class="service-content">
+					<div class="service-subtitle">DRAIN ISSUES WE SERVICE</div>
+					<h2 class="service-title">Kitchen Drains: Sink</h2>
+					<p class="service-description">
+						If you don't clean out your shower and sink drains regularly, all the buildup can wreak havoc on your home's sewage lines and pipes. It is important that you schedule drain cleaning routinely in order to minimize future problems and damage to your home.
+					</p>
+					<p class="service-description">
+						We provide efficient drain cleaning services for homeowners throughout Dubai, Dubai Marina, JLT, Business Bay, and Downtown.
+					</p>
+					<div class="service-cta">
+						<div class="service-cta-icon">🔧</div>
+						<div class="service-cta-text">
+							If you need clogged kitchen sinks, rely on the expert plumbers at Emergency Plumber Dubai. <a href={`tel:${phone}`} class="service-cta-link">Book Online</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="service-block" style="margin-top: 4rem;">
+				<div class="service-content">
+					<div class="service-subtitle">DRAIN ISSUES WE SERVICE</div>
+					<h2 class="service-title">Bathroom Drains: Shower, Tub, Sink</h2>
+					<p class="service-description">
+						Our expert plumbers assess and diagnose drain issues, remove obstructions, and use commercial drain cleaning machines to ensure your bathroom drains work perfectly. We handle showers, bathtubs, and bathroom sinks with professional care.
+					</p>
+					<div class="service-cta">
+						<div class="service-cta-icon">🔧</div>
+						<div class="service-cta-text">
+							If you need clogged bathroom drains, rely on the expert plumbers at Emergency Plumber Dubai. <a href={`tel:${phone}`} class="service-cta-link">Book Online</a>
+						</div>
+					</div>
+				</div>
+				<div class="service-image">
+					<div class="service-image-placeholder">
+						Isometric Bathroom Illustration<br/>
+						(Shower, Tub, Sink, Plumbers)
+					</div>
+				</div>
+			</div>
+			
+			<div class="service-block reversed" style="margin-top: 4rem;">
+				<div class="service-image">
+					<div class="service-image-placeholder">
+						Isometric Laundry Room Illustration<br/>
+						(Washing Machines, Plumber)
+					</div>
+				</div>
+				<div class="service-content">
+					<div class="service-subtitle">DRAIN ISSUES WE SERVICE</div>
+					<h2 class="service-title">Laundry Room: Main</h2>
+					<p class="service-description">
+						Is your laundry room sink slow to drain? Clogs and backups don't only happen in the kitchen or bathroom. Laundry room drains can also become blocked and cause flooding issues.
+					</p>
+					<div class="service-cta">
+						<div class="service-cta-icon">🔧</div>
+						<div class="service-cta-text">
+							Do you need a plumber to clear your laundry room's clog? Contact Emergency Plumber Dubai! <a href={`tel:${phone}`} class="service-cta-link">Book Online</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="service-block" style="margin-top: 4rem;">
+				<div class="service-content">
+					<div class="service-subtitle">DRAIN ISSUES WE SERVICE</div>
+					<h2 class="service-title">Main Sewer Line: House, Hydro Jet, Camera Inspection, Sewer Liner</h2>
+					<p class="service-description">
+						The mainline is the sewer line that connects your house to the city sewer or septic tank. When it backs up, it's crucial to know where your cleanout is located. Our expert plumbers use hydro jetting, camera inspection, and sewer liner installation to fix main sewer line issues.
+					</p>
+					<div class="service-cta">
+						<div class="service-cta-icon">🔧</div>
+						<div class="service-cta-text">
+							Do you need a plumber to clear your main sewer line? Contact Emergency Plumber Dubai! <a href={`tel:${phone}`} class="service-cta-link">Book Online</a>
+						</div>
+					</div>
+				</div>
+				<div class="service-image">
+					<div class="service-image-placeholder">
+						Isometric Main Sewer Line Illustration<br/>
+						(House, Pipes, Manholes, Plumbers)
+					</div>
+				</div>
+			</div>
+			
+			<div class="service-block reversed" style="margin-top: 4rem;">
+				<div class="service-image">
+					<div class="service-image-placeholder">
+						Isometric Accessible Cleanout Illustration<br/>
+						(House, Outdoor Cleanout, Plumber)
+					</div>
+				</div>
+				<div class="service-content">
+					<div class="service-subtitle">DRAIN ISSUES WE SERVICE</div>
+					<h2 class="service-title">Accessible Cleanout: Located Outside House</h2>
+					<p class="service-description">
+						Stopped drains are incredibly inconvenient. Whether it's your kitchen sink or an overflowing toilet, commercial drain cleaning through accessible outdoor cleanouts is the solution. Our plumbers locate and service your cleanout to restore proper drainage.
+					</p>
+					<div class="service-cta">
+						<div class="service-cta-icon">🔧</div>
+						<div class="service-cta-text">
+							Do you need a plumber to clear your accessible cleanout? Contact Emergency Plumber Dubai! <a href={`tel:${phone}`} class="service-cta-link">Book Online</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Coupons Section -->
+	<section class="coupons">
+		<div class="container">
+			<div class="coupon-container">
+				<button class="coupon-nav prev">‹</button>
+				<div class="coupon-card">
+					<div class="coupon-brand">EMERGENCY PLUMBER DUBAI</div>
+					<div class="coupon-amount">AED 199</div>
+					<div class="coupon-title">Drain Clearing Special</div>
+					<div class="coupon-terms">Limited Time Offer</div>
+					<div class="coupon-expiry">Expires: 12/31/2024</div>
+				</div>
+				<button class="coupon-nav next">›</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Testimonials -->
+	<section class="testimonials">
+		<div class="container">
+			<div class="testimonial-container">
+				<div class="yelp-logo">
+					<span class="yelp-logo-text">yelp</span>
+				</div>
+				<div class="stars">★★★★★</div>
+				<p class="testimonial-text">"Honesty and integrity. They provided a fair, efficient cost and time to repair estimate. Excellent service!"</p>
+				<p class="testimonial-author">Ahmed M. - Dubai, UAE</p>
+				<button class="testimonial-nav prev">‹</button>
+				<button class="testimonial-nav next">›</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Latest Projects -->
+	<section class="projects">
+		<div class="container">
+			<h2 class="section-title">Latest Projects</h2>
+			<p class="projects-subtitle">We Show 100% of Our Work Every Day.</p>
+			<div class="projects-container">
+				<button class="projects-nav prev">‹</button>
+				<div class="projects-grid">
+					<div class="project-card">
+						<div class="project-image">Sewer Line Repair</div>
+						<div class="project-title">Sewer Line Repair</div>
+					</div>
+					<div class="project-card">
+						<div class="project-image">Main Line Repair</div>
+						<div class="project-title">Main Line Repair</div>
+					</div>
+					<div class="project-card">
+						<div class="project-image">Drain Cleaning</div>
+						<div class="project-title">Drain Cleaning</div>
+					</div>
+				</div>
+				<button class="projects-nav next">›</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Service Areas -->
+	<section class="service-areas">
+		<div class="container">
+			<h2 class="section-title">Service Areas</h2>
+			<div class="map-container">
+				<div class="map-placeholder">
+					<p>Google Maps - Service Areas</p>
+					<p style="font-size: 0.9rem; margin-top: 0.5rem;">Dubai, UAE</p>
+				</div>
+				<!-- Map pins placeholder -->
+				<div class="map-pin" style="top: 30%; left: 40%;"></div>
+				<div class="map-pin" style="top: 50%; left: 50%;"></div>
+				<div class="map-pin" style="top: 60%; left: 45%;"></div>
+				<div class="map-pin" style="top: 40%; left: 55%;"></div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer id="contact">
+		<div class="footer-content">
+			<div class="footer-section">
+				<h3>EMERGENCY PLUMBER DUBAI</h3>
+				<p>Serving All Of</p>
+				<p>Dubai, Dubai Marina, JLT, Business Bay, Downtown</p>
+				<p><a href={`tel:${phone}`}>{phone}</a></p>
+			</div>
+			<div class="footer-section">
+				<h3>Links</h3>
+				<a href="/">Home</a>
+				<a href="#services">Services</a>
+				<a href="#contact">Contact Us</a>
+				<a href="#projects">Projects</a>
+				<a href="#service-areas">Service Areas</a>
+			</div>
+			<div class="footer-section">
+				<h3>Services</h3>
+				<a href={`tel:${phone}`}>Unclog Drain</a>
+				<a href={`tel:${phone}`}>Bathroom Drain</a>
+				<a href={`tel:${phone}`}>Kitchen Drain</a>
+				<a href={`tel:${phone}`}>Laundry Room</a>
+				<a href={`tel:${phone}`}>Main Sewer Line</a>
+				<a href={`tel:${phone}`}>Accessible Cleanout</a>
+				<a href="#privacy">Privacy Policy</a>
+			</div>
+			<div class="footer-section">
+				<h3>Contact Us</h3>
+				<p><a href={`tel:${phone}`}>{phone}</a></p>
+				<p>info@emergencyplumberdubai.ae</p>
+				<p>LIC# 123456</p>
+				<p>Dubai, UAE</p>
+				<div class="social-icons">
+					<a href="#" class="social-icon">f</a>
+					<a href="#" class="social-icon">📷</a>
+					<a href="#" class="social-icon">⭐</a>
+					<a href="#" class="social-icon">G</a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>© 2024 Emergency Plumber Dubai. All rights reserved.</p>
+			<a href="#privacy">Privacy Policy</a>
+		</div>
+	</footer>
+
+	<!-- Floating Chat Button -->
+	<a href={`tel:${phone}`} class="chat-button">💬</a>
 	</body>
 </html>
